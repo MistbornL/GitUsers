@@ -29,6 +29,12 @@
   color: #444;
 }
 
+@media screen and (max-width: 500px) {
+  .head-wrapper p {
+    width: 100vw;
+  }
+}
+
 form {
   position: relative;
   margin-bottom: 5px;
@@ -49,12 +55,6 @@ form input {
 
 form input::placeholder {
   font-size: 20px;
-}
-
-@media screen and (max-width: 500px) {
-  .head-wrapper p {
-    width: 100vw;
-  }
 }
 
 .data-wrap {
