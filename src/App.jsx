@@ -5,12 +5,10 @@ import { TypeAhead } from "./components/typeahead/TypeAhead";
 
 function App() {
   const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState("");
   const [data, setData] = useState([]);
-  const url = `https://api.github.com/search/users?q=${user}&per_page=5`;
 
   // function for fetching data from url declared above
-  const fetchData = async () => {
+  const fetchData = async (url) => {
     setLoading(true);
     fetch(url)
       .then((response) => response.json())
@@ -21,8 +19,9 @@ function App() {
 
   // fetch on every changed key
   const handleChange = async (e) => {
-    setUser(e.target.value);
-    await fetchData();
+    await fetchData(
+      `https://api.github.com/search/users?q=${e.target.value}&per_page=5`
+    );
   };
 
   return (
@@ -46,7 +45,6 @@ function App() {
           <form>
             <input
               onChange={handleChange}
-              value={user}
               placeholder="Username..."
               type="text"
             />
