@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+}
+
+.head-wrapper {
+  margin-top: 20px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head-wrapper img {
+  width: 72px;
+  height: 72px;
+}
+
+.head-wrapper h1 {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+.head-wrapper p {
+  width: 40vw;
+  font-size: 20px;
+  color: #444;
+}
+
+form {
+  position: relative;
+  margin-bottom: 5px;
+  margin-top: 50px;
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  border-style: none;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 500px;
+  height: 42px;
+}
+
+form input::placeholder {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .head-wrapper p {
+    width: 100vw;
+  }
+}
+
+.data-wrap {
+  display: flex;
+  justify-content: center;
+}
+.data-wrap div {
+  gap: 10px;
+  width: 200px;
+  align-items: center;
+  display: flex;
+}
+
+.data-wrap img {
+  width: 80px;
+  height: 50px;
+}
+
+.data-wrap a {
+  text-decoration: none;
+  color: rgb(207, 203, 203);
+}
